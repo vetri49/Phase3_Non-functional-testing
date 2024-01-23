@@ -1,0 +1,65 @@
+{
+	"id": "aa7ee8d9-f3ad-4c03-8670-4f1fbcf4e461",
+	"name": "Postman_Assignment_005",
+	"timestamp": "2024-01-23T09:34:18.937Z",
+	"collection_id": "32338972-9d7a13fe-2fc8-40cd-9c44-df7ae011b3ba",
+	"folder_id": 0,
+	"environment_id": "32338972-a99c59ae-7f61-4ad3-ae3e-1e5904fb4360",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-23T09:34:18.353Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "fae0c869-c033-40d9-9650-b27acace4685",
+			"name": "logout request",
+			"url": "https://petstore.swagger.io/v2/user/logout",
+			"time": 254,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate code is 200": true,
+				"Validate message is OK": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message is OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				254
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate code is 200": true,
+					"Validate message is OK": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 254,
+	"collection": {
+		"requests": [
+			{
+				"id": "fae0c869-c033-40d9-9650-b27acace4685",
+				"method": "GET"
+			}
+		]
+	}
+}

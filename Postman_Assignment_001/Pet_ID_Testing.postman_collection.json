@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "5c028378-ce0d-4e4f-b48c-123529219e90",
+		"name": "Pet_ID_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32338972",
+		"_collection_link": "https://www.postman.com/crimson-comet-509853/workspace/postman-assignment-001/collection/32338972-5c028378-ce0d-4e4f-b48c-123529219e90?action=share&source=collection_link&creator=32338972"
+	},
+	"item": [
+		{
+			"name": "Create PetID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string : available\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"available\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"id\":{{petID}}, \r\n\"category\": { \r\n\"id\": 0, \r\n\"name\": \"string\" \r\n}, \r\n\"name\":\"{{petName}}\", \r\n\"photoUrls\": [ \r\n\"string\" \r\n], \r\n\"tags\": [ \r\n{ \r\n\"id\": 0, \r\n\"name\": \"string\" \r\n} \r\n], \r\n\"status\": \"available\" \r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host_url}}",
+					"host": [
+						"{{Host_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate PetID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"petID\":{{petID}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host_url}}/{{petID}}",
+					"host": [
+						"{{Host_url}}"
+					],
+					"path": [
+						"{{petID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PetID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"petID\":{{petID}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host_url}}/{{petID}}",
+					"host": [
+						"{{Host_url}}"
+					],
+					"path": [
+						"{{petID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host_url",
+			"value": "https://petstore.swagger.io/v2/pet"
+		},
+		{
+			"value": "",
+			"type": "string"
+		}
+	]
+}

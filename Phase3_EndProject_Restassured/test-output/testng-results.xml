@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-23T18:07:31 IST" name="Default suite" finished-at="2024-01-23T18:07:39 IST" duration-ms="7564">
+    <groups>
+    </groups>
+    <test started-at="2024-01-23T18:07:31 IST" name="Default test" finished-at="2024-01-23T18:07:39 IST" duration-ms="7564">
+      <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_005.GetStatusTest">
+        <test-method signature="testPetStatus(java.lang.String)[pri:0, instance:com.simplilearn.restassuredtest.RestAssured_Assignment_005.GetStatusTest@4b8ee4de]" started-at="2024-01-23T18:07:31 IST" name="testPetStatus" data-provider="statusProvider" finished-at="2024-01-23T18:07:36 IST" duration-ms="4781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[available]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPetStatus -->
+        <test-method signature="testPetStatus(java.lang.String)[pri:0, instance:com.simplilearn.restassuredtest.RestAssured_Assignment_005.GetStatusTest@4b8ee4de]" started-at="2024-01-23T18:07:36 IST" name="testPetStatus" data-provider="statusProvider" finished-at="2024-01-23T18:07:38 IST" duration-ms="1275" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pending]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPetStatus -->
+        <test-method signature="testPetStatus(java.lang.String)[pri:0, instance:com.simplilearn.restassuredtest.RestAssured_Assignment_005.GetStatusTest@4b8ee4de]" started-at="2024-01-23T18:07:38 IST" name="testPetStatus" data-provider="statusProvider" finished-at="2024-01-23T18:07:39 IST" duration-ms="1437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sold]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPetStatus -->
+      </class> <!-- com.simplilearn.restassuredtest.RestAssured_Assignment_005.GetStatusTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

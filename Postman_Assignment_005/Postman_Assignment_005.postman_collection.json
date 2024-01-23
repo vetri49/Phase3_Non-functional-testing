@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "9d7a13fe-2fc8-40cd-9c44-df7ae011b3ba",
+		"name": "Postman_Assignment_005",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32338972",
+		"_collection_link": "https://www.postman.com/crimson-comet-509853/workspace/postman-assignment-002/collection/32338972-9d7a13fe-2fc8-40cd-9c44-df7ae011b3ba?action=share&source=collection_link&creator=32338972"
+	},
+	"item": [
+		{
+			"name": "logout request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate response code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate code is 200\", function () {\r",
+							"    pm.expect(pm.response.json().code).to.eql(200);\r",
+							"});\r",
+							"pm.test(\"Validate message is OK\", function () {\r",
+							"    pm.expect(pm.response.json().message).to.eql(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

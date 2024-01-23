@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "132d7b88-a03e-4958-8295-667e25bc3069",
+		"name": "Postman_Assignment_004",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32338972",
+		"_collection_link": "https://www.postman.com/crimson-comet-509853/workspace/postman-assignment-002/collection/32338972-132d7b88-a03e-4958-8295-667e25bc3069?action=share&source=collection_link&creator=32338972"
+	},
+	"item": [
+		{
+			"name": "Get status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate response code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate pet details based on the specified status\r",
+							"let expectedStatus = pm.request.url.query.get(\"status\");\r",
+							"let pets = pm.response.json();\r",
+							"\r",
+							"if (expectedStatus === \"available\") {\r",
+							"    pm.test(`Validate pet details for status = ${expectedStatus}`, function () {\r",
+							"        for (let pet of pets) {\r",
+							"            pm.expect(pet.status).to.eql(expectedStatus);\r",
+							"        }\r",
+							"    });\r",
+							"} else if (expectedStatus === \"pending\") {\r",
+							"    pm.test(`Validate pet details for status = ${expectedStatus}`, function () {\r",
+							"        for (let pet of pets) {\r",
+							"            pm.expect(pet.status).to.eql(expectedStatus);\r",
+							"        }\r",
+							"    });\r",
+							"} else if (expectedStatus === \"sold\") {\r",
+							"    pm.test(`Validate pet details for status = ${expectedStatus}`, function () {\r",
+							"        for (let pet of pets) {\r",
+							"            pm.expect(pet.status).to.eql(expectedStatus);\r",
+							"        }\r",
+							"    });\r",
+							"} else {\r",
+							"    pm.test(\"No validation for unknown status\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/findByStatus?status",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

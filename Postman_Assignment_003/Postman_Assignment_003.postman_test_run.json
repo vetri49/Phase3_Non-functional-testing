@@ -1,0 +1,71 @@
+{
+	"id": "2eff261e-d617-41c9-94e0-6e15d73f0d8f",
+	"name": "Postman_Assignment_003",
+	"timestamp": "2024-01-23T14:12:21.321Z",
+	"collection_id": "32338972-10cdbc22-3b63-47e6-b821-a56159c457c8",
+	"folder_id": 0,
+	"environment_id": "32338972-a99c59ae-7f61-4ad3-ae3e-1e5904fb4360",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-23T14:12:20.212Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "ed6212c5-c914-47a2-bffa-2352833b9800",
+			"name": "New Request",
+			"url": "https://petstore.swagger.io/v2/user/Uname001",
+			"time": 265,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Validate username is Uname001": false,
+				"Validate email is Positive@Attitude.com": false,
+				"Validate userStatus is 1": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validate username is Uname001": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validate email is Positive@Attitude.com": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validate userStatus is 1": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				265
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Validate username is Uname001": false,
+					"Validate email is Positive@Attitude.com": false,
+					"Validate userStatus is 1": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 265,
+	"collection": {
+		"requests": [
+			{
+				"id": "ed6212c5-c914-47a2-bffa-2352833b9800",
+				"method": "GET"
+			}
+		]
+	}
+}

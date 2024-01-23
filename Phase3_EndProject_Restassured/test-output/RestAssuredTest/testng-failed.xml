@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RestAssuredTest]">
+  <test thread-count="5" name="REST APIs(failed)">
+    <classes>
+      <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_001.GetCallTest">
+        <methods>
+          <include name="testGetPet"/>
+        </methods>
+      </class> <!-- com.simplilearn.restassuredtest.RestAssured_Assignment_001.GetCallTest -->
+      <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_001.DeleteCallTest">
+        <methods>
+          <include name="testDeletePet"/>
+        </methods>
+      </class> <!-- com.simplilearn.restassuredtest.RestAssured_Assignment_001.DeleteCallTest -->
+    </classes>
+  </test> <!-- REST APIs(failed) -->
+</suite> <!-- Failed suite [RestAssuredTest] -->

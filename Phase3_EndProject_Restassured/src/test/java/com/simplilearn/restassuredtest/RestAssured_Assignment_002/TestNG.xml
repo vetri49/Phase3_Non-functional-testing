@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="PetStorePUTTestSuite">
+    <test name="PetStorePUTTest_DEV">
+        <parameter name="environment" value="DEV"/>
+        <classes>
+            <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_002.PutCallRequest"/>
+        </classes>
+    </test>
+
+    <test name="PetStorePUTTest_QA">
+        <parameter name="environment" value="QA"/>
+        <classes>
+            <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_002.PutCallRequest"/>
+        </classes>
+    </test>
+
+    <test name="PetStorePUTTest_PROD">
+        <parameter name="environment" value="PROD"/>
+        <classes>
+            <class name="com.simplilearn.restassuredtest.RestAssured_Assignment_002.PutCallRequest"/>
+        </classes>
+    </test>
+</suite>

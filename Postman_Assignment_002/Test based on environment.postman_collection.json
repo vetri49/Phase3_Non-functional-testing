@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "5d203db7-0776-4ccb-b314-ac58f10adc43",
+		"name": "Test based on environment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32338972",
+		"_collection_link": "https://www.postman.com/crimson-comet-509853/workspace/postman-assignment-002/collection/32338972-5d203db7-0776-4ccb-b314-ac58f10adc43?action=share&source=collection_link&creator=32338972"
+	},
+	"item": [
+		{
+			"name": "Put Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate response code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate id in response\r",
+							"pm.test(\"Validate id is 20021\", function () {\r",
+							"  pm.expect(pm.response.json().category.id).to.eql(20021);\r",
+							"});\r",
+							"\r",
+							"// Validate status value based on environment\r",
+							"pm.test(\"Validate status value based on environment\", function () {\r",
+							"  let expectedStatus = pm.environment.get(\"status\");\r",
+							"  pm.expect(pm.response.json().status).to.eql(expectedStatus);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"id\": 9223372016900013000, \"category\": { \r\n\"id\": 20021, \r\n\"name\": \"string\" }, \r\n\"name\": \"doggie\", \"photoUrls\": [ \r\n\"string\" \r\n], \"tags\": [ \r\n{ \r\n\"id\": 0, \r\n\"name\": \"string\" \r\n} \r\n], \r\n\"status\":\"{{status}}\"  \r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TestURL}}",
+					"host": [
+						"{{TestURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

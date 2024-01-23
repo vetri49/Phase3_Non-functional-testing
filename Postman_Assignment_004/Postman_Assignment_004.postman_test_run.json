@@ -1,0 +1,59 @@
+{
+	"id": "63d69669-7825-4106-8975-1d8fa7dd46cf",
+	"name": "Postman_Assignment_004",
+	"timestamp": "2024-01-23T09:27:49.209Z",
+	"collection_id": "32338972-132d7b88-a03e-4958-8295-667e25bc3069",
+	"folder_id": 0,
+	"environment_id": "32338972-a99c59ae-7f61-4ad3-ae3e-1e5904fb4360",
+	"totalPass": 2,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-23T09:27:47.778Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "10d8d527-debc-4ba2-bfec-4ca344d0d328",
+			"name": "Get status",
+			"url": "https://petstore.swagger.io/v2/pet/findByStatus?status",
+			"time": 267,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"No validation for unknown status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"No validation for unknown status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				267
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"No validation for unknown status": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 267,
+	"collection": {
+		"requests": [
+			{
+				"id": "10d8d527-debc-4ba2-bfec-4ca344d0d328",
+				"method": "GET"
+			}
+		]
+	}
+}
